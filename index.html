@@ -1,11 +1,1178 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>CFP AGORA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CFP AGORA accompagne les entreprises en recrutement, formation, coaching et profiling.">
+  <title>CFP AGORA | L'humain au cœur de la performance</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #101f38;
+      --navy-dark: #07162c;
+      --blue: #2855a0;
+      --gold: #a99000;
+      --gold-light: #d6bc42;
+      --ivory: #f7f5f0;
+      --white: #ffffff;
+      --text: #28354a;
+      --muted: #697386;
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(16, 31, 56, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+    }
+
+    h1, h2 {
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 17px;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 46px);
+      margin-bottom: 20px;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 25px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy-dark);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+    }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,.7);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.12);
+    }
+
+    /* EN-TÊTE */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(0,0,0,.06);
+    }
+
+    .header-inner {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 205px;
+      max-height: 66px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      color: var(--blue);
+      font-size: 23px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav a {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy);
+      transition: color .2s;
+    }
+
+    .nav a:hover {
+      color: var(--gold);
+    }
+
+    .nav .nav-cta {
+      padding: 12px 17px;
+      border-radius: 5px;
+      background: var(--gold);
+      color: var(--navy-dark);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 28px;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7,22,44,.98) 0%,
+          rgba(7,22,44,.92) 43%,
+          rgba(7,22,44,.36) 100%
+        ),
+        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      padding: 95px 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 5.6vw, 72px);
+      max-width: 850px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      font-size: clamp(17px, 2vw, 21px);
+      max-width: 640px;
+      color: #e2e7ef;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    /* EXPERTISES */
+
+    .expertises {
+      padding: 100px 0;
+      background: var(--ivory);
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-heading .section-intro {
+      margin: auto;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .expertise-card {
+      min-height: 335px;
+      padding: 32px 27px;
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-9px);
+      box-shadow: 0 24px 55px rgba(16,31,56,.18);
+    }
+
+    .expertise-card:nth-child(1) {
+      background: var(--navy-dark);
+      color: white;
+    }
+
+    .expertise-card:nth-child(2) {
+      background: var(--blue);
+      color: white;
+    }
+
+    .expertise-card:nth-child(3) {
+      background: var(--gold);
+      color: var(--navy-dark);
+    }
+
+    .expertise-card:nth-child(4) {
+      background: white;
+      color: var(--navy);
+    }
+
+    .expertise-number {
+      font-size: 50px;
+      font-weight: 700;
+      opacity: .15;
+      line-height: 1;
+      text-align: right;
+    }
+
+    .expertise-icon {
+      font-size: 32px;
+      margin-bottom: 25px;
+      color: var(--gold-light);
+    }
+
+    .expertise-card:nth-child(3) .expertise-icon,
+    .expertise-card:nth-child(4) .expertise-icon {
+      color: var(--navy);
+    }
+
+    .expertise-card h3 {
+      font-size: 23px;
+      margin-bottom: 14px;
+    }
+
+    .expertise-card p {
+      font-size: 14px;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    .expertise-card a {
+      font-size: 13px;
+      font-weight: 700;
+      border-top: 1px solid currentColor;
+      padding-top: 16px;
+    }
+
+    /* CABINET */
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 550px;
+    }
+
+    .about-image {
+      min-height: 450px;
+      background:
+        url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1100&q=85")
+        center/cover;
+    }
+
+    .about-content {
+      padding: 80px min(8vw, 100px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-content p {
+      margin-bottom: 18px;
+      color: var(--muted);
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 3px;
+      background: var(--gold);
+      margin: 12px 0 28px;
+    }
+
+    /* ENJEUX B2B */
+
+    .challenges {
+      padding: 105px 0;
+      background: var(--navy);
+      color: white;
+    }
+
+    .challenges .section-title {
+      color: white;
+    }
+
+    .challenges .section-intro {
+      color: #c5cedc;
+    }
+
+    .challenge-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 48px;
+    }
+
+    .challenge-card {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      transition: .3s;
+    }
+
+    .challenge-card:hover {
+      background: rgba(255,255,255,.10);
+      border-color: var(--gold);
+      transform: translateY(-5px);
+    }
+
+    .challenge-card .number {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 22px;
+    }
+
+    .challenge-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .challenge-card p {
+      color: #cbd4e2;
+      font-size: 14px;
+    }
+
+    /* APPROCHE */
+
+    .approach {
+      padding: 100px 0;
+      background: white;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      margin-top: 55px;
+    }
+
+    .approach-item {
+      padding: 20px 25px;
+      border-left: 2px solid #e4e8ef;
+    }
+
+    .approach-item .symbol {
+      color: var(--gold);
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .approach-item h3 {
+      font-size: 17px;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .approach-item p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* PUBLICS */
+
+    .audiences {
+      padding: 100px 0;
+      background: var(--ivory);
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .audience-card {
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .audience-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .audience-body {
+      padding: 32px;
+    }
+
+    .audience-body h3 {
+      font-size: 24px;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .audience-body p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .text-link {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      padding: 100px 0;
+      background:
+        linear-gradient(90deg, rgba(7,22,44,.97), rgba(16,31,56,.82)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .contact-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .contact h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      margin-bottom: 18px;
+    }
+
+    .contact p {
+      max-width: 600px;
+      color: #d3dbe7;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 55px 0 25px;
+      background: var(--navy-dark);
+      color: #d3dce9;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+      padding-bottom: 35px;
+      border-bottom: 1px solid rgba(255,255,255,.16);
+    }
+
+    .footer-brand {
+      font-size: 26px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .footer-top p {
+      font-size: 13px;
+      color: #aebbd0;
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      font-size: 12px;
+      color: #9baac0;
+    }
+
+    /* ANIMATIONS */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* TABLETTE */
+
+    @media (max-width: 1050px) {
+      .expertise-grid,
+      .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav {
+        gap: 13px;
+      }
+
+      .nav a {
+        font-size: 12px;
+      }
+
+      .about-content {
+        padding: 55px 7%;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+      .header-inner {
+        min-height: 76px;
+      }
+
+      .brand img {
+        width: 170px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 25px 6%;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: 0 15px 25px rgba(0,0,0,.1);
+      }
+
+      .nav.open {
+        display: flex;
+      }
+
+      .nav a {
+        font-size: 15px;
+        padding: 7px 0;
+      }
+
+      .hero {
+        min-height: 600px;
+        background-position: 60% center;
+      }
+
+      .hero-content {
+        padding: 75px 0;
+      }
+
+      .expertises,
+      .challenges,
+      .approach,
+      .audiences,
+      .contact {
+        padding: 75px 0;
+      }
+
+      .expertise-grid,
+      .challenge-grid,
+      .approach-grid,
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 310px;
+      }
+
+      .about-content {
+        padding: 65px 6%;
+      }
+
+      .contact-inner,
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Bienvenue chez CFP AGORA</h1>
-<p>Cabinet de conseil, de formation et de coaching en entreprise.</p>
+
+  <!-- EN-TÊTE -->
+
+  <header class="header">
+    <div class="container header-inner">
+
+      <a href="#accueil" class="brand" aria-label="CFP AGORA - Accueil">
+        <img
+          src="logo-cfp-agora.png"
+          alt="CFP AGORA"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        >
+        <span class="brand-text" style="display:none;">CFP AGORA</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <a href="#accueil">Accueil</a>
+        <a href="#cabinet">Le cabinet</a>
+        <a href="#expertises">Nos expertises</a>
+        <a href="#enjeux">Vos enjeux</a>
+        <a href="#approche">Notre approche</a>
+        <a href="#contact" class="nav-cta">Échangeons</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero" id="accueil">
+      <div class="container hero-content">
+
+        <span class="eyebrow">
+          Conseil · Formation · Accompagnement
+        </span>
+
+        <h1>
+          L'humain au cœur<br>
+          de la <span>performance.</span>
+        </h1>
+
+        <p>
+          Nous aidons les entreprises à révéler les talents,
+          développer les compétences et renforcer durablement
+          la performance de leurs équipes.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#expertises" class="btn btn-gold">
+            Découvrir nos expertises →
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            Échanger sur vos besoins
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERTISES -->
+
+    <section class="expertises" id="expertises">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Nos domaines d'expertise</span>
+
+          <h2 class="section-title">
+            Quatre expertises.<br>
+            Une ambition commune.
+          </h2>
+
+          <p class="section-intro">
+            Accompagner les organisations à chaque étape
+            du développement de leur capital humain.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+
+          <article class="expertise-card reveal">
+            <div class="expertise-number">01</div>
+            <div class="expertise-icon">◎</div>
+            <h3>Recrutement</h3>
+            <p>
+              Identifier les talents, évaluer les compétences
+              et sécuriser les décisions de recrutement.
+            </p>
+            <a href="#contact">Parlons de vos besoins →</a>
+          </article>
+
+          <article class="expertise-card reveal">
+            <div class="expertise-number">02</div>
+            <div class="expertise-icon">◇</div>
+            <h3>Formation</h3>
+            <p>
+              Développer les compétences, faire évoluer
+              les comportements et améliorer les pratiques.
+            </p>
+            <a href="#contact">Construisons votre programme →</a>
+          </article>
+
+          <article class="expertise-card reveal">
+            <div class="expertise-number">03</div>
+            <div class="expertise-icon">✦</div>
+            <h3>Coaching</h3>
+            <p>
+              Renforcer le leadership, accompagner
+              les managers et révéler les potentiels.
+            </p>
+            <a href="#contact">Découvrir notre accompagnement →</a>
+          </article>
+
+          <article class="expertise-card reveal">
+            <div class="expertise-number">04</div>
+            <div class="expertise-icon">▥</div>
+            <h3>Profiling</h3>
+            <p>
+              Comprendre les personnalités et les comportements
+              pour éclairer les décisions et améliorer la collaboration.
+            </p>
+            <a href="#contact">Échanger sur votre projet →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CABINET -->
+
+    <section class="about" id="cabinet">
+
+      <div class="about-image" role="img" aria-label="Équipe professionnelle en réunion"></div>
+
+      <div class="about-content reveal">
+        <span class="eyebrow">Le cabinet</span>
+
+        <h2 class="section-title">
+          Un partenaire engagé dans
+          le développement humain.
+        </h2>
+
+        <div class="gold-line"></div>
+
+        <p>
+          CFP AGORA accompagne les entreprises dans leurs enjeux
+          de recrutement, de développement des compétences
+          et de transformation professionnelle.
+        </p>
+
+        <p>
+          Notre conviction : la performance durable repose
+          sur les femmes et les hommes qui composent
+          les organisations.
+        </p>
+
+        <p>
+          Nous privilégions des solutions concrètes,
+          adaptées aux réalités et aux objectifs
+          de chaque entreprise.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ENJEUX B2B -->
+
+    <section class="challenges" id="enjeux">
+      <div class="container">
+
+        <div class="reveal">
+          <span class="eyebrow">Vos enjeux, nos solutions</span>
+
+          <h2 class="section-title">
+            Vos défis humains méritent<br>
+            des réponses concrètes.
+          </h2>
+
+          <p class="section-intro">
+            Dirigeants, DRH et responsables de formation :
+            nous vous accompagnons dans les défis
+            qui influencent directement la performance
+            de votre organisation.
+          </p>
+        </div>
+
+        <div class="challenge-grid">
+
+          <article class="challenge-card reveal">
+            <div class="number">01 / TALENTS</div>
+            <h3>Attirer et recruter les bons profils</h3>
+            <p>
+              Identifier les compétences et les comportements
+              adaptés aux besoins de votre organisation.
+            </p>
+          </article>
+
+          <article class="challenge-card reveal">
+            <div class="number">02 / COMPÉTENCES</div>
+            <h3>Développer les compétences des équipes</h3>
+            <p>
+              Concevoir des formations utiles, opérationnelles
+              et directement applicables.
+            </p>
+          </article>
+
+          <article class="challenge-card reveal">
+            <div class="number">03 / MANAGEMENT</div>
+            <h3>Renforcer le leadership managérial</h3>
+            <p>
+              Accompagner les managers dans leur posture,
+              leurs responsabilités et leurs décisions.
+            </p>
+          </article>
+
+          <article class="challenge-card reveal">
+            <div class="number">04 / CULTURE CLIENT</div>
+            <h3>Améliorer l'expérience client</h3>
+            <p>
+              Développer les attitudes et les comportements
+              qui renforcent la qualité de service.
+            </p>
+          </article>
+
+          <article class="challenge-card reveal">
+            <div class="number">05 / COLLABORATION</div>
+            <h3>Favoriser la cohésion des équipes</h3>
+            <p>
+              Mieux comprendre les profils et renforcer
+              les relations de travail.
+            </p>
+          </article>
+
+          <article class="challenge-card reveal">
+            <div class="number">06 / TRANSFORMATION</div>
+            <h3>Accompagner le changement</h3>
+            <p>
+              Faire évoluer les pratiques, les compétences
+              et les comportements dans la durée.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROCHE -->
+
+    <section class="approach" id="approche">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Notre valeur ajoutée</span>
+
+          <h2 class="section-title">
+            Une approche centrée sur l'humain,<br>
+            orientée vers les résultats.
+          </h2>
+
+          <p class="section-intro">
+            Nous plaçons les besoins réels de l'entreprise,
+            les compétences et les comportements
+            au cœur de chaque intervention.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+
+          <div class="approach-item reveal">
+            <div class="symbol">◎</div>
+            <h3>Écoute et diagnostic</h3>
+            <p>
+              Comprendre vos enjeux avant de proposer
+              une solution.
+            </p>
+          </div>
+
+          <div class="approach-item reveal">
+            <div class="symbol">✧</div>
+            <h3>Expertise métier</h3>
+            <p>
+              Mobiliser des méthodes et des outils
+              adaptés à votre contexte.
+            </p>
+          </div>
+
+          <div class="approach-item reveal">
+            <div class="symbol">◇</div>
+            <h3>Solutions sur mesure</h3>
+            <p>
+              Construire des interventions alignées
+              sur vos objectifs.
+            </p>
+          </div>
+
+          <div class="approach-item reveal">
+            <div class="symbol">↗</div>
+            <h3>Impact durable</h3>
+            <p>
+              Favoriser le transfert des acquis
+              dans les pratiques quotidiennes.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICS -->
+
+    <section class="audiences" id="publics">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">Nos accompagnements</span>
+
+          <h2 class="section-title">
+            Des solutions adaptées<br>
+            à chaque parcours.
+          </h2>
+        </div>
+
+        <div class="audience-grid">
+
+          <article class="audience-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85"
+              alt="Immeubles de bureaux"
+              loading="lazy"
+            >
+
+            <div class="audience-body">
+              <span class="eyebrow">Notre priorité</span>
+              <h3>Entreprises et organisations</h3>
+
+              <p>
+                Recrutement, développement des compétences,
+                formation des équipes, coaching managérial
+                et accompagnement de la performance.
+              </p>
+
+              <a href="#contact" class="text-link">
+                Discutons de vos enjeux →
+              </a>
+            </div>
+          </article>
+
+          <article class="audience-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
+              alt="Paysage évoquant la progression personnelle"
+              loading="lazy"
+            >
+
+            <div class="audience-body">
+              <span class="eyebrow">Accompagnement individuel</span>
+              <h3>Particuliers</h3>
+
+              <p>
+                Coaching individuel, connaissance de soi
+                et développement personnel
+                et professionnel.
+              </p>
+
+              <a href="#contact" class="text-link">
+                Découvrir l'accompagnement →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+      <div class="container contact-inner">
+
+        <div class="reveal">
+          <span class="eyebrow">Construisons ensemble votre réussite</span>
+
+          <h2>
+            Vous avez un projet ?<br>
+            <span style="color:var(--gold-light)">Parlons-en.</span>
+          </h2>
+
+          <p>
+            Formation, recrutement, coaching ou profiling :
+            échangeons sur vos objectifs
+            et identifions ensemble les solutions adaptées.
+          </p>
+        </div>
+
+        <a href="mailto:VOTRE-EMAIL@EXEMPLE.COM?subject=Demande%20de%20contact%20CFP%20AGORA"
+           class="btn btn-gold">
+          Échanger sur vos besoins →
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">CFP AGORA</div>
+          <p>Recrutement · Formation · Coaching · Profiling</p>
+        </div>
+
+        <p>
+          Cabinet de conseil en développement humain
+        </p>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 CFP AGORA — Tous droits réservés.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Menu mobile
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    document.querySelectorAll(".nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Animations au défilement
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      document.querySelectorAll(".reveal").forEach(element => {
+        observer.observe(element);
+      });
+    } else {
+      document.querySelectorAll(".reveal").forEach(element => {
+        element.classList.add("visible");
+      });
+    }
+  </script>
+
 </body>
 </html>
